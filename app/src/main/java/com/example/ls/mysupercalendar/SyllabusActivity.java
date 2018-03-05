@@ -73,7 +73,6 @@ public class SyllabusActivity extends AppCompatActivity {
         rvToDoList.setAdapter(new ExampleAdapter(this));
 
 
-        //要给字体添加小红点之类的去CustomDayView里面
         initCurrentDate();
         initCalendarView();
         initToolbarClickListener();
@@ -184,12 +183,19 @@ public class SyllabusActivity extends AppCompatActivity {
      * 初始化标记数据，HashMap的形式，可自定义
      * 如果存在异步的话，在使用setMarkData之后调用 calendarAdapter.notifyDataChanged();
      */
+    //TODO 这里标记来显示下面的小红点哦！！
+
     private void initMarkData() {
         HashMap<String, String> markData = new HashMap<>();
-        markData.put("2017-8-9", "1");
-        markData.put("2017-7-9", "0");
-        markData.put("2017-6-9", "1");
-        markData.put("2017-6-10", "0");
+        markData.put("2018-3-5", "1");
+        markData.put("2018-3-2", "0");
+        markData.put("2018-3-8", "1");
+        markData.put("2018-3-11", "0");
+        markData.put("2018-3-15", "1");
+        markData.put("2018-3-12", "0");
+        markData.put("2018-3-23", "0");
+        markData.put("2018-3-25", "1");
+
         calendarAdapter.setMarkData(markData);
     }
 
